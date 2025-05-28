@@ -1,0 +1,115 @@
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.buttons {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 24px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    background-color: white;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #4CAF50;
+}
+
+input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+.buttonLabel {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.input-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.input-container label {
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.input-container input {
+    width: 10vh;
+    border-radius: 10px;
+}
+
+#generatePass {
+    margin-left: 20px;
+    background-color: rgb(255, 71, 71);
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    transition: all 0.4s;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace
+}
+
+#generatePass:hover {
+    background-color: rgb(219, 23, 23);
+}
+
+#generatePass:active {
+    filter: brightness(1.5);
+    transition: all 0.4s;
+}
+
+#outputText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
